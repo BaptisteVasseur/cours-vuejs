@@ -1,19 +1,11 @@
 <script setup>
 import { RouterView } from 'vue-router'
+import Header from '@/components/Header.vue'
+import Footer from '@/components/Footer.vue'
 </script>
 
 <template>
-  <header class="bg-red-500 text-white">
-    Title
-  </header>
-
+  <Header />
   <RouterView />
-
-  <footer>
-    Copyright
-  </footer>
+  <Footer />
 </template>
-
-<style scoped>
-
-</style>
