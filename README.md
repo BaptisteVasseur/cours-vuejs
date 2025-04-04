@@ -1,35 +1,25 @@
-# mon-app
+# App Vente de vetements
 
-This template should help get you started developing with Vue 3 in Vite.
+## Notions vues : 
 
-## Recommended IDE Setup
+- Views / Router / Sous-Composants
+- Props (types, requis ou pas)
+- Computed 
+- Events + Events personnalisés
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## A voir :
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+- Store (Pinia)
+- Watch
+- Authentification
+- Axios
+- Composable
+- Slots
+- Transitions
+- Animations
+- Mixins
+- Directives
+- Plugins
+- Filters
+- SSR
+- Nuxt
