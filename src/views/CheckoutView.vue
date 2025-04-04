@@ -39,6 +39,11 @@ let totalPrice = computed(() => {
   return result;
 });
 
+function deleteCheckoutItem(id) {
+  productsInCheckout.value = productsInCheckout.value.filter((product) => product.id !== id)
+  console.log('Produit supprimé avec succès')
+}
+
 
 </script>
 
@@ -50,9 +55,11 @@ let totalPrice = computed(() => {
       <CheckoutElementCard
         v-for="productInCheckout in productsInCheckout"
         :key="productInCheckout.id"
+        :id="productInCheckout.id"
         :title="productInCheckout.name"
         :price="productInCheckout.price"
         :quantity="productInCheckout.quantity"
+        @deleteCheckoutItem="deleteCheckoutItem"
       />
 
       <div class="flex justify-between items-center bg-gray-100 p-4 rounded-lg">

@@ -1,11 +1,12 @@
 <script setup>
 
 const menuItems = [
-  { name: 'Accueil', url: '#' },
+  { name: 'Accueil', url: '/' },
   { name: 'Nouveautés', url: '#' },
-  { name: 'Homme', url: '#' },
-  { name: 'Femme', url: '#' },
+  { name: 'Homme', url: '/categorie/1' },
+  { name: 'Femme', url: '/categorie/2' },
   { name: 'Contact', url: '#' },
+  { name: 'Panier', url: '/checkout' },
 ]
 
 </script>

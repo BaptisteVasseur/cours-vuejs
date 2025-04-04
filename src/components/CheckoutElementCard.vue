@@ -1,14 +1,16 @@
 <script setup>
 
 const props = defineProps({
+  id: Number,
   title: String,
   quantity: Number,
   price: Number,
 })
 
+const emits = defineEmits(['delete-checkout-item'])
+
 function deleteElement() {
-  // Remonter l'info au parent pour supprimer l'élément (avec un emit)
-  // Dans le parent : écouter l'event et supprimer l'élément de la liste
+  emits('delete-checkout-item', props.id)
 }
 
 </script>
