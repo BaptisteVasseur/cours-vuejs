@@ -1,6 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import CounterView from '@/views/CounterView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -8,12 +6,27 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView,
+      component: () => import('@/views/HomeView.vue'),
     },
     {
       path: '/counter',
       name: 'counter',
-      component: CounterView,
+      component: () => import('@/views/CounterView.vue'),
+    },
+    {
+      path: '/category/:id/list',
+      name: 'category_list',
+      component: () => import('@/views/CategoryListView.vue'),
+    },
+    {
+      path: '/category/:id',
+      name: 'category',
+      component: () => import('@/views/CategoryView.vue'),
+    },
+    {
+      path: '/checkout',
+      name: 'checkout',
+      component: () => import('@/views/CheckoutView.vue'),
     }
   ],
 })

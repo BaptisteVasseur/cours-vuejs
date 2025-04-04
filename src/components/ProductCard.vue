@@ -15,7 +15,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="border rounded-2xl overflow-hidden shadow hover:shadow-md transition">
+  <div class="border border-gray-100 rounded-2xl overflow-hidden shadow hover:shadow-md transition">
     <img
       :src="props.image"
       :alt="props.title"
