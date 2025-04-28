@@ -44,7 +44,6 @@ function deleteCheckoutItem(id) {
   console.log('Produit supprimé avec succès')
 }
 
-
 </script>
 
 <template>
