@@ -1,13 +1,16 @@
 <script setup>
 
+import { useCheckoutStore } from '@/store/useCheckoutStore.js'
+
 const menuItems = [
   { name: 'Accueil', url: '/' },
   { name: 'Nouveautés', url: '#' },
   { name: 'Homme', url: '/categorie/1' },
   { name: 'Femme', url: '/categorie/2' },
   { name: 'Contact', url: '#' },
-  { name: 'Panier', url: '/checkout' },
 ]
+
+const checkoutStore = useCheckoutStore();
 
 </script>
 
@@ -16,12 +19,17 @@ const menuItems = [
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
       <h1 class="text-2xl font-bold">Chaussures Élégance</h1>
       <nav class="space-x-6 hidden md:flex">
-        <a
+        <router-link
           v-for="menuItem in menuItems" :key="menuItem.name"
-          :href="menuItem.url" class="hover:text-blue-600"
-          >
+          :to="menuItem.url" class="hover:text-blue-600"
+        >
           {{menuItem.name}}
-        </a>
+        </router-link>
+
+        <router-link :to="{name: 'checkout'}" class="hover:text-blue-600">
+          Panier ({{ checkoutStore.count }})
+        </router-link>
+
       </nav>
       <button class="md:hidden">☰</button>
     </div>
