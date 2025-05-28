@@ -10,12 +10,11 @@ Pour ce cours, on va utiliser une base de donnée avec Supabase. Vous pouvez cr�
 - Events + Events personnalisés
 - Store (Pinia)
 - Watch
-
-## A voir :
-
-
 - Mixins/Composable
 - VueUse (https://vueuse.org/)
+
+
+## A voir :
 
 - Slots
 - Transitions
