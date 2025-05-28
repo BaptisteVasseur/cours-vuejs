@@ -1,27 +1,12 @@
 <script setup>
 
 import ProductCard from '@/components/ProductCard.vue'
+import { useProductStore } from '@/store/useProductStore.js'
+import { onBeforeMount } from 'vue'
 
-const products = [
-  {
-    title: 'Manteau',
-    price: 10,
-    description: 'aaa',
-    image: 'https://images.stockx.com/images/Nike-Air-Force-1-Low-Supreme-Box-Logo-Black-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=75&q=57&dpr=2&trim=color&updated_at=1738193358',
-  },
-  {
-    title: 'Chaussure',
-    price: 20,
-    description: 'bbb',
-    image: 'https://images.stockx.com/images/Nike-Air-Force-1-Low-Supreme-Box-Logo-Black-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=75&q=57&dpr=2&trim=color&updated_at=1738193358',
-  },
-  {
-    title: 'Babouche (merci Sami)',
-    price: 30,
-    description: 'ccc',
-    image: 'https://images.stockx.com/images/Nike-Air-Force-1-Low-Supreme-Box-Logo-Black-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=75&q=57&dpr=2&trim=color&updated_at=1738193358',
-  }
-]
+const { loading, error, allProducts, getPopularProducts } = useProductStore();
+
+onBeforeMount(getPopularProducts);
 
 </script>
 
@@ -29,8 +14,25 @@ const products = [
   <section class="py-12">
     <div class="max-w-7xl mx-auto px-4">
       <h3 class="text-2xl font-semibold mb-8 text-center">Produits en vedette</h3>
+
+      <div v-if="loading" class="flex justify-center items-center">
+        Chargement des produits...
+        <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+      </div>
+
+      <div v-if="error" class="text-red-500 text-center">
+        Une erreur s'est produite lors du chargement des produits.
+      </div>
+
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        <ProductCard v-for="product in products" :title="product.title" :price="product.price" :description="product.description" :image="product.image" />
+        <ProductCard
+          v-for="product in allProducts"
+          :key="product.id"
+          :title="product.title"
+          :price="product.price"
+          :description="product.description"
+          :image="product.image_url"
+        />
       </div>
     </div>
   </section>

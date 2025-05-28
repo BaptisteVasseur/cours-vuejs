@@ -4,10 +4,10 @@ import { useCheckoutStore } from '@/store/useCheckoutStore.js'
 
 const menuItems = [
   { name: 'Accueil', url: '/' },
-  { name: 'Nouveautés', url: '#' },
-  { name: 'Homme', url: '/categorie/1' },
-  { name: 'Femme', url: '/categorie/2' },
-  { name: 'Contact', url: '#' },
+  { name: 'Nouveautés', url: '/category/new' },
+  { name: 'Homme', url: '/category/homme' },
+  { name: 'Femme', url: '/category/femme' },
+  { name: 'Contact', url: '/' },
 ]
 
 const checkoutStore = useCheckoutStore();

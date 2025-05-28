@@ -3,10 +3,12 @@ import { computed, ref } from 'vue'
 
 export const useCheckoutStore = defineStore('checkout', () => {
 
+  // TODO : récupérer depuis le local storage
   const products = ref([]);
 
   function addProduct(product) {
     products.value.push(product);
+    // TODO : sauvegarder dans le local storage
   }
 
   function removeProduct(productId) {

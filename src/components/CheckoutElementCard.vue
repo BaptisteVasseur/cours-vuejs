@@ -19,7 +19,7 @@ function deleteElement() {
   <div class="flex items-center justify-between border-b border-gray-200 pb-4">
     <div class="flex items-center gap-4">
       <img
-        src="https://via.placeholder.com/100"
+        src="https://placehold.co/600x400"
         class="w-20 h-20 object-cover rounded"
         alt="Produit"
       />

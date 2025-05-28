@@ -8,21 +8,21 @@ Pour ce cours, on va utiliser une base de donnée avec Supabase. Vous pouvez cr�
 - Props (types, requis ou pas)
 - Computed 
 - Events + Events personnalisés
+- Store (Pinia)
+- Watch
 
 ## A voir :
 
-- Store (Pinia)
-- Watch
-- VueUse (https://vueuse.org/)
-- Authentification
-- Axios
+
 - Mixins/Composable
+- VueUse (https://vueuse.org/)
+
 - Slots
 - Transitions
 - Animations
-- Mixins
 - Directives
 - Plugins
-- Filters
+- Authentification
+- Axios
 - SSR
 - Nuxt
