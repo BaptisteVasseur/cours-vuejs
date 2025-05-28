@@ -5,8 +5,8 @@ import { useCheckoutStore } from '@/store/useCheckoutStore.js'
 const menuItems = [
   { name: 'Accueil', url: '/' },
   { name: 'Nouveautés', url: '/category/new' },
-  { name: 'Homme', url: '/category/homme' },
-  { name: 'Femme', url: '/category/femme' },
+  { name: 'Homme', url: '/category/men' },
+  { name: 'Femme', url: '/category/women' },
   { name: 'Contact', url: '/' },
 ]
 

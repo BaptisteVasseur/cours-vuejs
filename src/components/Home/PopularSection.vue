@@ -8,6 +8,7 @@ const { loading, error, allProducts, getPopularProducts } = useProductStore();
 
 onBeforeMount(getPopularProducts);
 
+getPopularProducts();
 </script>
 
 <template>

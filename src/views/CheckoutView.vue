@@ -12,7 +12,6 @@ let totalPrice = computed(() => {
   // }
   //
   // return result
-  return 0;
 })
 
 </script>
